@@ -1,0 +1,418 @@
+
+\documentclass[a4paper,10pt]{cpc-hepnp}
+
+\usepackage{graphics}
+\usepackage{booktabs}
+\usepackage{amssymb,bm,mathrsfs,bbm,amscd}
+\usepackage[tbtags]{amsmath}
+\usepackage{lastpage}
+\usepackage{CJK}
+\usepackage{setspace}
+
+
+\begin{document}
+
+\begin{CJK*}{GBK}{song}
+
+\title{Study of two classes of composite designs}
+\author{%
+Si Qiu
+\quad Jianhui Ning
+}
+\maketitle
+
+\address{%
+Central China Normal University
+}
+
+
+\begin{abstract}
+In this paper,\ we study the efficiencies of two classes of  composite designs.\ The fisrt class is the central composite designs (CCDs) which are the most popular used second-order designs in response surface studies.\ The second class is the composite designs based on orthogonal array (OACDs).\ Given the assuming second-order polynomial model,\ the $D-$efficiency of two classes of designs for general $\alpha$ were derived.\ Moreover,\ the determination of the $\alpha$ value for star points was also discussed from the perspective of space-filling and $C-$efficiency.
+\end{abstract}
+
+
+\begin{keyword}
+Central composite design;\ orthogonal array composite design;\ $\alpha$ value;\ $D-$efficiency;\ $C-$efficiency;\ centered discrepancy.
+\end{keyword}
+
+
+\onehalfspacing
+\section{Introduction}
+In many case studies,\ the goal of experiment is to find a level-combination of the factors that can optimize the response or achieve a desirable value of the response.\ Suppose that the process or system involves a response $y$ that depends on the input factors $x_1,...,x_k$.\ Their relationship can be modeled by
+\begin{equation}
+y=f(x_1,...,x_k)+\epsilon
+\end{equation}
+where the form of the true function $f$ is unknown and $\epsilon$ is an error term.\ Because $f$ is unknown and $y$ is observed with random error,\ we need to run experiments to obtain data about $f$.\ Success of the investigation depends on how well $f$ can be approximated.\ Response surface methodology,\ proposed by Box and Wilson (1951),\ is a strategy to achieve this goal that involves experimentation,\ modeling,\ data analysis and optimization.\ The first stage in many experiments is to perform a screening process by fitting a first-order linear model to the data.\ If the first-order model suffers from lack of fit due to the existence of some surface curvature,\ a second-order polynomial model is employed.\ For   quantitative factors denoted by $x_1,...,x_k$,\ a second-order polynomial model is
+\begin{equation}
+y=\beta_0+\sum_{i=1}^k\beta_ix_i+\sum_{i=1}^k\beta_{ii}x_i^2+\sum_{i=1<j\leq k}\beta_{ij}x_ix_j+\epsilon
+\end{equation}
+where $\beta_0,\beta_i,\beta_{ii},\beta_{ij}$ are the intercept,\ linear,\ quadratic and bilinear terms respectively,\ and $\epsilon$ is the error term.\ For a comprehensive account of response surface methodology, see Box and Draper (2007), Khuri and Cornell (1996), and Myers, Montgomery and Anderson-Cook (2009).The common way that researchers address response surface methodology in the literature is to use central composite designs (CCDs) introduced by Box and Wilson (1951).\ There are also other variations such as small composite designs (SCDs) proposed by Draper and Lin (1990) and augmented-pair designs (APDs) proposed by Morris (2000).\ Composite designs are often used to fit the second-order model.\ A designs is called a  second-order design if it allows all parameters in the second-order model (2) to be estimated.\ The above mentioned composite designs are second-order designs.
+
+
+We give a brief introduction to composite designs.\ For $k$ factors, a composite design consists of 3 parts: (i)$n_1$ cube points (or corner points) with $x_i=1$ or -1; (ii)$n_2$ star points (or additional points) with $x_i=\alpha$ or $-\alpha$; (iii)$n_0$ center points with all $x_i=0$. If $\alpha=1$, the composite design has 3 different levels, if not, the design has 5 different levels. Two-level orthogonal arrays such as full or fractional factorial designs are often used as the cube points. Xu, Jaynes and Ding (2014) introduced a new class of composite designs, called orthogonal array composite designs (OACDs), which use a 3-level orthogonal array as the star points. Zhou and Xu (2016) developed some theoretical results on CCDs and OACDs for $\alpha=1$. If the $\alpha$ value is not chosen to be 1,\ what will the results be?\ So in this paper, we derived bounds of  $D-$efficiency of the two classes of designs for estimating all and part of the parameters in a second-order model for general $\alpha$. We further introduced the $C-$efficiency to compare the two classes of composite designs.\ In choosing a composite design,\ the determination of the $\alpha$ value should be considered.\ For central composite designs,\ Box and Hunter (1957) provides one criterion,\ that is rotatability.\ We proceed from the perspective of space-filling and efficiency to disscuss the determination of the $\alpha$ value for both two classes of composite designs.
+
+This paper is organized as follows. Central composite designs and orthogonal array composite designs are discussed in section 2 and 3 respectively. The determination of the $\alpha$ value is discussed in section 4. Conclusion remarks are given in section 5 and we give proofs in the Appendix.
+
+
+
+\section{Central composite designs}
+Suppose that there are $k$ input factors, a central composite design uses the axial points as star points, then it consists of the following three parts:
+\begin{itemize}
+\item $n_1$ cube points with $x_i=1$ or -1 for $i=1,...,k$;
+\item $n_2$ axial points of the form $(0,...,x_i,..,0)$ with $x_i=\alpha$ or $-\alpha$ for $i=1,...,k$;
+\item $n_0$ center points with all $x_i=0$ for $i=1,...,k$.
+\end{itemize}
+
+\subsection{The definition of $D-$efficiency}
+Let $d$ be the $k$-factor composite design, $X=(\textbf{1},Q,L,B)$ be the model matrix of the second-order model (2), where \textbf{1} is a column of ones, $Q,L$ and $B$ are quadratic, linear and bilinear terms, respectively. Let $d_i$ be the part $i$ of the design for $i=1,2$. The total number of runs of $d$ is $N=n_1+n_2+n_0$. The $D-$efficiency of $d$ is
+\begin{equation}
+D(d)=N^{-1}| X^\prime X|^{1/p}
+\end{equation}
+where $p=(k+1)(k+2)/2$ is the number of parameters in the second-order model (2). Sometimes the partial efficiency also need to considered, we use the $D_s-$efficiency describes the precision for estimating a subset of the model parameters. Define $D_s-$efficiency as
+\begin{equation}
+D_s(d)=N^{-1}|X^\prime_{s} X_{s}-X^\prime_{s} X_{(s)}(X^\prime_{(s)} X_{(s)})^{-1}X^\prime_{(s)} X_{s}|^{1/t}
+\end{equation}
+where $s$ is a subset of factors, $X_s$ and $X_{(s)}$ are the sub-matrices of $X$  corresponding to the parameters in $s$ or not in $s$, respectively, and $t$ is the number of parameters in $s$.  Since
+\begin{equation}
+|X^\prime X|=|X^\prime_{(s)} X_{(s)}||X^\prime_{s} X_{s}-X^\prime_{s} X_{(s)}(X^\prime_{(s)} X_{(s)})^{-1}X^\prime_{(s)} X_{s}|
+\end{equation}
+then the $D_s-$efficiency can also be calculated by
+\begin{equation}
+D_s(d)=N^{-1}(\frac{| X^\prime X|}{| X^\prime_{(s)} X_{(s)}|})^{1/t}
+\end{equation}
+Let $D_L$, $D_B$ and $D_Q$ be the $D_s-$efficiency for the linear, bilinear and quadratic terms, respectively.
+
+\subsection{The $D-$efficiencies of central composite designs}
+From equation (3) and (6), we obtain the follow Theorem 1.
+
+\textbf{Theorem 1.} For a CCD with $k$ factors and $n_0$ center points, if the 2-level portion is an $OA(n_1,2^k,4)$, its $D-$, $D_L-$, $D_B-$ and $D_Q-$ efficiencies are, respectively,
+\begin{equation}
+D(CCD)=\frac{1}{N}\{n_1^q(2\alpha^4n_1+4\alpha^6)^k[(1+\frac{kn_1}{2\alpha^4})n_0+(1-\frac{k}{\alpha^2})^2n_1]\}^{1/p}
+\end{equation}
+\begin{equation}
+D_L(CCD)=\frac{1}{N}(n_1+2\alpha^2)
+\end{equation}
+\begin{equation}
+D_B(CCD)=\frac{n_1}{N}
+\end{equation}
+\begin{equation}
+D_Q(CCD)=\frac{2\alpha^4}{N^{\frac{k+1}{k}}}[(1+\frac{kn_1}{2\alpha^4})n_0+(1-\frac{k}{\alpha^2})^2n_1]^{1/k}
+\end{equation}
+where $N=n_1+2k+n_0$,\ $q=k(k-1)/2$,\ $p=(k+1)(k+2)/2$.
+
+We can see that the $\alpha$ value affects the efficiencies of CCDs except the $D_B$-efficiency. So it is important to choose a proper $\alpha$.
+
+
+
+\section{Orthogonal array composite designs}
+Xu, Jaynes and Ding (2014) introduce a new class of composite designs that combine a two-level factorial or fractional factorial design and a three-level orthogonal array, and  refer to them as orthogonal array composite designs (OACDs). An orthogonal array of $n$ runs, $k$ columns, $s$ levels, and strength $t$, denoted by $OA(n,s^{k},t)$, is an $n\times k$ matrix. In general, the strength $t$ is omitted when $t=2$. Detailed account of the theory and application of orthogonal array can see Hedayat, Sloane and Stufken (1999).
+
+In an orthogonal array composite design, its star points form a 3-level orthogonal array. So an orthogonal array composite design with $k$ factors has three parts as follows:
+\begin{itemize}
+\item $n_1$ cube points with $x_i=1$ or -1 for $i=1,...,k$;
+\item a 3-level orthogonal array with $n_2$ runs;
+\item $n_0$ center points with all $x_i=0$ for $i=1,...,k$.
+\end{itemize}
+
+Orthogonal array composite designs are constructed with careful consideration of experimental cost, time and statistical efficiency. Xu et al.(2014) present several advantages for considering an OACD. First, they present a good trade-off between model parameter
+estimation efficiency and run size economy. Second, an OACD uses a better initial design than existing composite designs, enabling
+all linear effects to be estimated clearly from any interaction effects. Third, they offer more in-depth analyses than traditional designs
+using either a two-level or three-level design, that is, an OACD has the built-in ability to perform cross-validation on the data quality
+and analysis results. Separate analyses for the two-level and three-level parts, as well as the combined two-level and three-level OACD,
+can be performed by building three models: a model with linear and bilinear terms based on the two-level design, a model with linear
+and quadratic terms based on the three-level orthogonal array, and a full second-order model based on the entire OACD. Because each
+linear effect is estimated three times, and each bilinear and quadratic effect are estimated twice, we can check the consistency of their
+estimates, providing model confirmation. Fourth, an OACD can be used in either a single or sequential experiment, that is, starting with a two-level design, followed by a three-level design or starting with a three-level design, followed by a two-level design; this feature
+is particularly appealing in many industrial and engineering experiments. Because of its desirable features, many researchers use OACDs to investigate biological systems. Jaynes et al.(2015) present a novel application of OACDs to optimize lipid production of a cell-free system
+for algae.
+
+Because of the information matrix and efficiencies for OACDs depend on the specific 3-level orthogonal array used, we cannot get general theoretical results for the $D-$efficiency and $D_s-$efficiencies. We now consider lower bounds of the efficiencies and have the following Theorem 2 and Theorem 3. For the  $D_L-$efficiency, we also have upper bound. \\
+\textbf{Theorem 2.} Let an $OA(n_{1},2^{k},4)$ be the first part and an $OA(n_{2},3^{k})$ be the second part of the OACD. The determinant of its information matrix and $D-$efficiency have the following lower bounds, respectively,
+\begin{equation}
+| X^\prime X|\geq \eta
+\end{equation}
+\begin{equation}
+\eta=n_1^q[\frac{(4n_2\alpha^2+6n_1)\alpha^2n_2}{27}]^{k}[(1+2k\alpha^2)n_0+n_2+n_1(1+2k\alpha^2+\frac{9kn_0}{2n_2\alpha^2}+\frac{9k}{2\alpha^2}-6k)]
+\end{equation}
+\begin{equation}
+D(OACD)\geq LB(OACD)=N^{-1}(\eta)^{1/p}
+\end{equation}
+where $N=n_1+n_2+n_0$,\ $q=k(k-1)/2$,\ $p=(k+1)(k+2)/2$. \\
+\textbf{Theorem 3.} Suppose that an OACD satisfies the conditions in Theorem 2. Its $D_L-$, $D_B-$, $D_Q-$efficiencies have the following lower bounds, respectively,
+\begin{equation}
+D_L(OACD)\geq \frac{1}{N}(\frac{9n_1}{9n_1+4n_2\alpha^4})^{q/k}(\frac{2}{3}n_2\alpha^2+n_1)
+\end{equation}
+\begin{equation}
+D_B(OACD)\geq \frac{n_1}{N}
+\end{equation}
+\begin{equation}
+D_Q(OACD)\geq \frac{2n_2\alpha^2}{9N^{\frac{k+1}{k}}}(\frac{9n_1}{9n_1+4n_2\alpha^4})^{q/k}[(1+2k\alpha^2)n_0+n_2+n_1(1+2k\alpha^2+\frac{9kn_0}{2n_2\alpha^2}+\frac{9k}{2\alpha^2}-6k)]^{1/k}
+\end{equation}
+where $N=n_1+n_2+n_0$,\ $q=k(k-1)/2$. Furthermore,\ its $D_L-$efficiency has an upper bound
+\begin{equation}
+D_L(OACD)\leq \frac{1}{N}(\frac{2}{3}n_2\alpha^2+n_1)
+\end{equation}
+the equality holds when the linear terms of second part of the design are orthogonal to the bilinear terms of second part of the design.
+
+In order to compare the two classes of composite designs intuitively, next we give an example to compare the efficiency of the composite designs.\\
+\textbf{Example 1.} We compare OACDs with CCDs consisting of the same 2-level portion for $k=4,...,12$.\ We choose a full factorial $2^k$ for $k=4$ or a regular $2^{k-m}$ design with resolution at least \uppercase\expandafter{\romannumeral5} for $k=5,...,11$.\ For $k=12$,\ we use an $OA(128,2^{15},4)$ from Xu (2005) as the 2-level portion.\ For the 3-level OA,\ we choose the first $k$ columns of $OA(9,3^{4},2)$,\ $OA(18,3^{7},2)$ and $OA(27,3^{13},2)$ from Sloane's website. Table 1 and Table 2 shows the $D-$efficiency of OACDs and CCDs as well as the lower bound for $\alpha=1$ and $\alpha=1.5$, respectively, with $n_0=5$ center points. For every $k\geq 4$, an OACD has larger $D-$efficiency than a CCD for every $\alpha$. And the lower bound of OACD is also larger than CCD's $D-$efficiency when $\alpha=1$. When $\alpha=1.5$,\ the lower bound of OACD no longer larger than CCD's $D-$efficiency for $k=4,...,7$, but the $D-$efficiency of OACDs still larger than CCD's. From Figure 1 and Figure 2 we can get this result intuitively. 
+
+\begin{center}
+\tabcaption{ \label{tab1}  Comparison of $D-$efficiency between OACDs and CCDs for $\alpha=1$ with $n_0=5$ center points}
+\footnotesize
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $k$ & $d_1$ & $d_2$ & $D(OACD)$ & $LB(OACD)$ & $D(CCD)$ \\\hline
+  4 & $2^4$ & $OA(9,3^4)$ & 0.42108 & 0.40179 & 0.39835 \\\hline
+  5 & $2^{5-1}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(18,3^5)$ & 0.44523 & 0.38248 & 0.37968 \\\hline
+  6 & $2^{5-1}_{\uppercase\expandafter{\romannumeral6}}$ & $OA(18,3^6)$ & 0.48160 & 0.43847 & 0.41672 \\\hline
+  7 & $2^{7-1}_{\uppercase\expandafter{\romannumeral7}}$ & $OA(18,3^7)$ & 0.50102 & 0.47804 & 0.44163 \\\hline
+  8 & $2^{8-2}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^8)$ & 0.52416 & 0.48455 & 0.44919 \\\hline
+  9 & $2^{9-2}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^9)$ & 0.54165 & 0.51972 & 0.46666 \\\hline
+  10 & $2^{10-3}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^{10})$ & 0.55634 & 0.53500 & 0.47925 \\\hline
+  11 & $2^{11-4}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^{11})$& 0.56969 & 0.54881 & 0.48990 \\\hline
+  12 & $OA(128,2^{12},4)$ & $OA(27,3^{12})$ & 0.58118 & 0.56132 & 0.49885 \\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\tabcaption{ \label{tab1}  Comparison of $D-$efficiency between OACDs and CCDs for $\alpha=1.5$ with $n_0=5$ center points}
+\footnotesize
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $k$ & $d_1$ & $d_2$ & $D(OACD)$ & $LB(OACD)$ & $D(CCD)$ \\\hline
+  4 & $2^4$ & $OA(9,3^4)$ & 0.72977 & 0.53363 & 0.56000 \\\hline
+  5 & $2^{5-1}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(18,3^5)$ & 0.93602 & 0.51456 & 0.52616 \\\hline
+  6 & $2^{5-1}_{\uppercase\expandafter{\romannumeral6}}$ & $OA(18,3^6)$ & 0.86086 & 0.55279 & 0.55928 \\\hline
+  7 & $2^{7-1}_{\uppercase\expandafter{\romannumeral7}}$ & $OA(18,3^7)$ & 0.77859 & 0.57529 & 0.57837 \\\hline
+  8 & $2^{8-2}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^8)$ & 0.86378 & 0.58210 & 0.57862 \\\hline
+  9 & $2^{9-2}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^9)$ & 0.79590 & 0.60460 & 0.59011 \\\hline
+  10 & $2^{10-3}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^{10})$ & 0.79343 & 0.61569 & 0.59763 \\\hline
+  11 & $2^{11-4}_{\uppercase\expandafter{\romannumeral5}}$ & $OA(27,3^{11})$& 0.79161 & 0.62566 & 0.60319 \\\hline
+  12 & $OA(128,2^{12},4)$ & $OA(27,3^{12})$ & 0.78745 & 0.63466 & 0.60717 \\
+  \hline
+\end{tabular}
+\end{center}
+
+In fact, for the 3-level orthogonal array,\ permuting its level lead to OACD with different $D-$effficiency. We can search a high efficiency design by permuting level for several factors.
+
+\section{The determination of the $\alpha$ value}
+
+\subsection{$C-$efficiency}
+The most well-known and popularly used design criterion is the $D-$efficiency. An implicit assumption for $D-$efficiency is that all parameters are equally important, this may not be appropriate for the two-stage design. To overcome its disadvantage, Lu, Lin and Zhou (2009) propose a new criterion, called $C-$efficiency. The $C-$efficiency is defined as
+\begin{equation}
+C=D_{\textbf{1}}^{w_{\textbf{1}}}D_{L}^{w_L}D_{B}^{w_B}D_{Q}^{w_Q}
+\end{equation}
+where $w_{\textbf{1}}$, $w_L$, $w_B$, $w_Q$, are nonnegative weights and $w_{\textbf{1}}+w_L+w_B+w_Q=1$. The weights represent the importance of the parameter sets, more important parameter sets carry heavier weights. For different first-stage points, one can specify different weights to $C-$efficiency. Lu, Lin and Zhou (2009) suggests five specifications of the weights.
+
+We now use the $C-$efficiency to compare CCDs and OACDs for $k=4$ factors.\\
+\textbf{Example 2.} Consider the same CCDs and OACDs as in example 1 for $k=4$ and compare their $C-$efficiency for $\alpha=1,...,2$. Because the 2-level portion of the design is a $2^4$ full factorial design, following Lu, Lin and Zhou (2009) we set $w_{\textbf{1}}=w_L=w_B=0$ and $w_Q=1$. Figure 3 shows that the $C-$efficiency of CCDs larger than OACDs, but in fact this phenomena just appear in $k=4$. Another results is that the $C-$efficiency increases as the $\alpha$ increases. So the $C-$efficiency is maximized in selecting larger $\alpha$.
+
+\subsection{New criterion for choosing $\alpha$ value}
+
+For CCDs, Wu and Hamada(2009) gives some suggestions on the determination of the $\alpha$ value. In general, $\alpha$ should be chosen between 1 and $\sqrt{k}$ and rarely outside this range. For $\alpha=1$, the star points are placed at the center of the faces of the cube, $\alpha=\sqrt{k}$ makes the star points and cube points lie on the same sphere. The efficiency of the parameter estimates is increased by pushing the star points toward the extreme, however, for large $k$, this choice should be taken with caution because the star points are too far from the center point and
+no information is available for the response surface in the intermediate range of the factors, especially along the axes. From example 1 and example 2, we can find the effect of the $\alpha$ value on efficiency, the larger $\alpha$ is, the greater efficiency is. In general, if it is desired to collect information closer to the faces of the cube, a smaller $\alpha$ value should be chosen. If estimation efficiency is a concern, the star points should be pushed toward the extremes of the region, namely choosing a larger $\alpha$. Box and Hunter (1957) provides a criterion for CCDs to determine the $\alpha$ value. The criterion is rotatability. If the central composite design is rotatable, then $\alpha=2^{(k-m)/4}$.
+ 
+Yet there is no general criterion for choosing $\alpha$ for composite designs, and it is indeed needed. So one purpose of this paper is to propose a new criterion for choosing $\alpha$ and applicable to both classes composite designs. What we need to pay attention to is that, above discussion is under the second-order model. When the true model is unknown and the second-order model does not fit the true model, it is meaningless to choose larger $\alpha$ to get higher efficiency design, and sometimes the bound of the $\alpha$ value cannot achieve. We all know this, if we lack the information about the true model, we prefer to distribute points uniformly. That is to say, we would like to get a design as uniformly as possible to conduct experiments. Uniform design has robustness for different models. Take these into consideration, we propose to determine the $\alpha$ value from the perspective of space-filling, using the uniformity to choose $\alpha$. So the criterion to determine $\alpha$ is the discrepancy. We give a simple example to show our idea.\\
+\textbf{Example 3.} Suppose that the response y depends on four input factors $x_1,x_2,x_3,x_4$.\ $x_1\in [11.20,13.60]$,\ $x_2\in [1.98,3.04]$,\ $x_3\in [0.75,1.75]$,\ $x_4\in [1.00,3.00]$.\ For the sake of later calculation easier and eliminate the influence of variable dimension, we convert $x_i$ to coded variables firstly. We transfer the lower bound of the actual level into -2 and the upper bound into 2,\ then $\alpha$ can be arbitrary value from 1 to 2.\ In this example, we use the centered discrepancy to measure the uniformity of designs. We calculate centered discrepancy of OACDs and CCDs for different $\alpha$. Figure 4 and Figure 5 show the tendency of centered discrepancy changing with different $\alpha$. From the two figures, we can find that the OACD is the most uniformly design for $\alpha=1.4$; when $\alpha=1.6$, the CCD is the most uniformly design. If we determine the $\alpha$ value from the perspective of rotatability, then $\alpha=2$.
+
+
+
+\section{Conclusion remarks}
+We study the estimation efficiencies of CCDs and OACDs under a second-order polynomial model for general $\alpha$ value. We find that OACDs are more effective in estimating the parameters than CCDs especially the number of factors is large. The OACDs provide a good trade-off between estimation efficiency and run size economy, so it can be used as an alternative to the popular CCDs. We also provided some criterions to choose the $\alpha$ value. Different criterions will make different results. In practice, the determination of the $\alpha$ value also depends on the objectives of each experiment and the geometric nature of and the practical constraints on the design region. We proposed an idea to determine $\alpha$ value from the the perspective of space-filling, find a $\alpha$ to make the design most uniformly, but we haven't give the theoretical results. We hope to address this issue in future work. In addition, the number of center points will affect the composite designs, further discussion on the number of runs at the center point can be found in Box and Draper (2007), it is an important problem for future investigation.
+
+
+
+\section*{Appendix}
+
+
+\textbf{Lemma 1.} Let $a\neq0$, $b\neq0$,
+\begin{equation*}
+\begin{pmatrix}c_0 & c{\textbf{1}}^{\prime}_k \\ c\textbf{1}_k & a\textbf{J}_k+b\textbf{I}_k \end{pmatrix}=b^{k-1}(bc_0+k(ac_0-c^2)).
+\end{equation*}
+
+
+\textbf{Lemma 2.} Let $E$ and $F$ be two $n\times n$ nonnegative definite matrices with partions
+\begin{equation*}
+E=\begin{pmatrix}E_1 & \textbf{0} \\ \textbf{0} & E_2 \end{pmatrix}\geq 0,\  F=\begin{pmatrix}F_1 & F_3 \\ F^{\prime}_3 & F_2 \end{pmatrix}\geq 0,
+\end{equation*}
+where $E_1$ and $F_1$ are $m\times m$ matrices. Then
+\begin{equation*}
+|E+F|\geq |E_2|\cdot|E_1+F_1|.
+\end{equation*}
+
+\renewcommand{\theequation}{\arabic{equation}}
+\textbf{Proof of Theorem 1.}
+The information matrix of the central composite design is block diagonal as follows:
+\begin{equation}
+X^{\prime}X=\begin{pmatrix}N & (n_1+2\alpha^2)\textbf{1}^{\prime}_k & \textbf{0} & \textbf{0} \\ (n_1+2\alpha^2)\textbf{1}_k & n_1J_k+2\alpha^4I_k & \textbf{0} & \textbf{0} \\ \textbf{0} & \textbf{0} & (n_1+2\alpha^2)I_k & \textbf{0} \\ \textbf{0} & \textbf{0} & \textbf{0} & n_1I_q \end{pmatrix},
+\end{equation}
+where $\textbf{1}_{k}$ is a column of k ones, $I_k$ is $k\times k$ identity matrix, $J_k$ is the $k\times k$ matrix of ones. So it is easy to obtain that
+\begin{equation}
+|X^{\prime}X|=n_1^q(2\alpha^4n_1+4\alpha^6)^k[(1+\frac{kn_1}{2\alpha^4})n_0+(1-\frac{k}{\alpha^2})^2n_1],
+\end{equation}
+\begin{equation}
+|X^{\prime}_{(L)}X_{(L)}|=n_1^q(2\alpha^4)^k[(1+\frac{kn_1}{2\alpha^4})n_0+(1-\frac{k}{\alpha^2})^2n_1],
+\end{equation}
+\begin{equation}
+|X^{\prime}_{(B)}X_{(B)}|=(2\alpha^4n_1+4\alpha^6)^k[(1+\frac{kn_1}{2\alpha^4})n_0+(1-\frac{k}{\alpha^2})^2n_1],
+\end{equation}
+\begin{equation}
+|X^{\prime}_{(Q)}X_{(Q)}|=N(n_1+2\alpha^2)^kn_1^q,
+\end{equation}
+then use the definition of $D-$efficiency we can get formula (7), (8), (9), (10).
+
+\textbf{Proof of Theorem 2.}
+Denote $X_0=(\textbf{1}_{n_0},\textbf{0},\textbf{0},\textbf{0})$ and $X_i=(\textbf{1}_{n_i},Q_i,L_i,B_i)$, where $Q_i$, $L_i$, $B_i$ respectively are the quadratic, linear and bilinear terms of $d_i$ in the second-order model, $i=1,2$.
+\begin{equation}
+X^{\prime}_1X_1=\begin{pmatrix}n_1 & n_1\textbf{1}^{\prime}_k & \textbf{0} & \textbf{0} \\ n_1\textbf{1}_k & n_1J_k & \textbf{0} & \textbf{0} \\ \textbf{0} & \textbf{0} & n_1I_k & \textbf{0} \\ \textbf{0} & \textbf{0} & \textbf{0} & n_1I_q \end{pmatrix}=\begin{pmatrix}n_1J_{k+1} & \textbf{0} & \textbf{0} \\ \textbf{0} & n_1I_k & \textbf{0} \\ \textbf{0} & \textbf{0} & n_1I_q\end{pmatrix},
+\end{equation}
+\begin{equation}
+X^{\prime}_2X_2=\begin{pmatrix}n_2 & \frac{2}{3}n_2\alpha^2\textbf{1}^{\prime}_k & \textbf{0} & \textbf{0} \\ \frac{2}{3}n_2\alpha^2\textbf{1}_k & \frac{4}{9}n_2\alpha^4J_k+\frac{2}{9}n_2\alpha^4I_k & \textbf{0} & Q_2^{\prime}B_2 \\ \textbf{0} & \textbf{0} & \frac{2}{3}n_2\alpha^2I_k & L_2^{\prime}B_2 \\ \textbf{0} & B_2^{\prime}Q_2 & B_2^{\prime}L_2 & B_2^{\prime}B_2 \end{pmatrix},
+\end{equation}
+let $Y=X^{\prime}_2X_2+X^{\prime}_0X_0$, then
+\begin{equation}
+Y=\begin{pmatrix}n_2+n_0 & \frac{2}{3}n_2\alpha^2\textbf{1}^{\prime}_k & \textbf{0} & \textbf{0} \\ \frac{2}{3}n_2\alpha^2\textbf{1}_k & \frac{4}{9}n_2\alpha^4J_k+\frac{2}{9}n_2\alpha^4I_k & \textbf{0} & Q_2^{\prime}B_2 \\ \textbf{0} & \textbf{0} & \frac{2}{3}n_2\alpha^2I_k & L_2^{\prime}B_2 \\ \textbf{0} & B_2^{\prime}Q_2 & B_2^{\prime}L_2 & B_2^{\prime}B_2 \end{pmatrix},
+\end{equation}
+denote
+\begin{equation}
+B_{11}=\begin{pmatrix}n_2+n_0 & \frac{2}{3}n_2\alpha^2\textbf{1}^{\prime}_k \\ \frac{2}{3}n_2\alpha^2\textbf{1}_k & \frac{4}{9}n_2\alpha^4J_k+\frac{2}{9}n_2\alpha^4I_k\end{pmatrix}, B_{13}=\begin{pmatrix}\textbf{0} \\ Q_2^{\prime}B_2\end{pmatrix},
+\end{equation}
+then
+\begin{equation}
+X^{\prime}X=X^{\prime}_1X_1+Y=\begin{pmatrix}B_{11}+n_1J_{k+1} & \textbf{0} & B_{13} \\
+\textbf{0} & (\frac{2}{3}n_2\alpha^2+n_1)I_k & L_2^{\prime}B_2 \\ B_{13}^{\prime} & B_2^{\prime}L_2 & n_1I_q+B_2^{\prime}B_2\end{pmatrix},
+\end{equation}
+from Lemma 2, we get
+\begin{equation}
+|X^{\prime}X|=|X^{\prime}_1X_1+Y|\geq |n_1I_q|\cdot\begin{vmatrix} B_{11}+n_1J_{k+1} & \textbf{0} \\ \textbf{0} & (\frac{2}{3}n_2\alpha^2+n_1)I_k\end{vmatrix}=n_1^q(\frac{2}{3}n_2\alpha^2+n_1)^k|B_{11}+n_1J_{k+1}|,
+\end{equation}
+from Lemma 1, we have
+\begin{equation}
+|B_{11}+n_1J_{k+1}|=(\frac{2}{9}n_2\alpha^2)^k[(1+2k\alpha^2)n_0+n_2+n_1(1+2k\alpha^2+\frac{9kn_0}{2n_2\alpha^2}+\frac{9k}{2\alpha^2}-6k)],
+\end{equation}
+therefore
+\begin{equation}
+|X^{\prime}X|\geq n^q_1[\frac{(4n_2\alpha^2+6n_1)\alpha^2n_2}{27}]^k[(1+2k\alpha^2)n_0+n_2+n_1(1+2k\alpha^2+\frac{9kn_0}{2n_2\alpha^2}+\frac{9k}{2\alpha^2}-6k)],
+\end{equation}
+then we can obtain formula (13).
+
+\textbf{Proof of Theorem 3.}
+When $s=L$, from  formula (28) and Fischer inequality, we have
+\begin{equation}
+|X^{\prime}_{(L)}X_{(L)}|\leq|B_{11}+n_1J_{k+1}|\cdot|n_1I_q+B_2^{\prime}B_2|,
+\end{equation}
+because all of the diagonal elements of $B_2^{\prime}B_2$ are $\frac{4}{9}n_2\alpha^4$, we have
+\begin{equation}
+|n_1I_q+B_2^{\prime}B_2|\leq(n_1+\frac{4}{9}n_2\alpha^4)^q,
+\end{equation}
+so
+\begin{equation}
+|X^{\prime}_{(L)}X_{(L)}|\leq|B_{11}+n_1J_{k+1}|\cdot(n_1+\frac{4}{9}n_2\alpha^4)^q,
+\end{equation}
+then using formula (6) and (31), we obtain formula (14).
+Moreover, from Fischer inequality, we have
+\begin{equation}
+|X^{\prime}X|\leq|X^{\prime}_{(L)}X_{(L)}|\cdot|X^{\prime}_LX_L|,
+\end{equation}
+so we have
+\begin{equation}
+\frac{|X^{\prime}X|}{|X^{\prime}_{(L)}X_{(L)}|}\leq|X^{\prime}_LX_L|=|(\frac{2}{3}n_2\alpha^2+n_1)I_k|=(\frac{2}{3}n_2\alpha^2+n_1)^k,
+\end{equation}
+then get formula (17), if the linear terms of $d_2$ are orthogonal to the bilinear terms of $d_2$, then
+\begin{equation}
+\frac{|X^{\prime}X|}{|X^{\prime}_{(L)}X_{(L)}|}=|X^{\prime}_LX_L|,
+\end{equation}
+and the upper bound of $D_L-$efficiency is achieved.
+
+When $s=B$, from  formula (28),
+\begin{equation}
+|X^{\prime}_{(B)}X_{(B)}|=\begin{vmatrix} B_{11}+n_1J_{k+1} & \textbf{0} \\ \textbf{0} & (\frac{2}{3}n_2\alpha^2+n_1)I_k\end{vmatrix}=|B_{11}+n_1J_{k+1}|\cdot(\frac{2}{3}n_2\alpha^2+n_1)^k,
+\end{equation}
+then follows from formula  (6) and (31),we get the lower bound of $D_B-$efficiency.
+
+When $s=Q$, from  formula (28) and Fischer inequality,
+\begin{equation}
+\begin{split}
+|X^{\prime}_{(Q)}X_{(Q)}|&=\begin{vmatrix} N & \textbf{0} & \textbf{0} \\ \textbf{0} & (\frac{2}{3}n_2\alpha^2+n_1)I_k & L_2^{\prime}B_2 \\ \textbf{0} & B_2^{\prime}L_2 & n_1I_q+B_2^{\prime}B_2\end{vmatrix}\leq N\cdot(\frac{2}{3}n_2\alpha^2+n_1)^k\cdot|n_1I_q+B_2^{\prime}B_2|\\
+& \leq N\cdot(\frac{2}{3}n_2\alpha^2+n_1)^k\cdot(n_1+\frac{4}{9}n_2\alpha^4)^q,
+\end{split}
+\end{equation}
+then follows from formula (6), (11) and (33),we get the lower bound of $D_Q-$efficiency.
+
+
+\vspace{10mm}
+
+
+
+\begin{thebibliography}{90}
+
+\vspace{3mm}
+
+\bibitem{lab1} Box, G. E. P. and Hunter, J. S. (1957). Multifactor Experimental Designs for Exploring Response Surfaces. Annals of Mathematical Statistics, 28(1), 195-241.
+
+\bibitem{lab2} Box, G. E. P. and Wilson, K. B. (1951). On the experimental attainment of optimum conditions. Journal of Royal Statistics Society, 13, 1-45. 
+
+\bibitem{lab3} Box, G. E. P. and Draper, N. R. (2007). Response Surfaces, Mixtures, and Ridge Analyses. 2nd edition. Wiley, New York.
+
+\bibitem{lab4} Draper, N. R. and Lin, D. K. (1990). Small response-surface designs. Technometrics, 32(2), 187-194.
+
+\bibitem{lab5} Hedayat, A. S., Sloane, N. J. A. and Stufken, J. (1999). Orthogonal Arrays: Theory and Applications. Springer, New York.
+
+\bibitem{lab6} Khuri, A. and Cornell, J. A. (1996). Response Surfaces: Designs and Analyses. 2nd edition. Marcel Dekker, New York.
+
+\bibitem{lab7} Lu, X., Lin, D. K. and Zhou, D. (2009). On Construction of Two-stage Response Surface Designs. Quality Technology and Quantitative Management, 6(4), 493-502.
+
+\bibitem{lab8} Morris, M. D. (2000). A class of three-level experimental designs for response surface modeling. Technometrics, 42(2), 111-121.
+
+\bibitem{lab9} Myers, R. H., Montgomery, D. C. and Anderson-Cook, C. M. (2009). Response Surface Methodology: Process and Product Optimization Using Designed Experiments. 3rd edition. Wiley, New York.
+    
+\bibitem{lab10} Wu, C. F. J. and Hamada, M. (2009). Experiments: Planning, Analysis and Parameter Design Optimization. 2nd edition. Wiley, New York.    
+\bibitem{lab11} Xu, H. (2005). Some nonregular designs from the Nordstrom¨CRobinson code and their statistical properties. Biometrika, 92(2), 385-397.
+
+\bibitem{lab12} Xu, H., Jaynes, J. and Ding, X. (2014). Combining two-level and three-level orthogonal arrays for factor screening and response surface exploration. Statistica Sinica, 24, 269-289.
+
+\bibitem{lab13} Zhou, Y. D. and Xu, H. Q. (2016). Composite Designs Based on Orthogonal Arrays and Definitive Screening Designs. Journal of the American Statistical Association,, 0-0.
+
+\bibitem{lab14} Jaynes, J., Zhao, Y., Xu, H. and Ho, C. (2015). Use of Orthogonal Array Composite Designs to Study Lipid Accumulation in a Cell-Free System. Quality and Reliability Engineering International, 32(5), 1965-1974.
+
+\end{thebibliography}
+
+
+\newpage
+\begin{center}
+\includegraphics{Figure1.png}
+\figcaption{\label{fig1}  Comparison of D-efficiency between OACDs and CCDs for $\alpha=1$ with $n_0=5$ center points }
+\end{center}
+~\\
+\begin{center}
+\includegraphics{Figure2.png}
+\figcaption{\label{fig2} Comparison of D-efficiency between OACDs and CCDs for $\alpha=1.5$ with $n_0=5$ center points  }
+\end{center}
+
+\newpage
+\begin{center}
+\includegraphics{Figure3.png}
+\figcaption{\label{fig3} C-efficiency of OACDs and CCDs for $k=4$ factors }
+\end{center}
+
+\begin{center}
+\includegraphics{Figure4.pdf}
+\figcaption{\label{fig4} Centered discrepancy of OACDs for $k=4$ factors }
+\end{center}
+
+\newpage
+\begin{center}
+\includegraphics{Figure5.pdf}
+\figcaption{\label{fig5} Centered discrepancy of CCDs for $k=4$ factors }
+\end{center}
+
+
+
+\clearpage
+
+\end{CJK*}
+\end{document}
